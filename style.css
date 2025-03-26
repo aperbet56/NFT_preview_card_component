@@ -1,0 +1,177 @@
+/**** Importation de la police Outfit ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/**** Variables css ****/
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-very-dark-blue: hsl(217, 54%, 11%);
+    --second-very-dark-blue: hsl(216, 50%, 16%);
+    --third-very-dark-blue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/**** Reset ****/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**** body ****/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-very-dark-blue);
+    padding: 100px 0;
+    font-family: "Outfit", sans-serif;
+}
+
+.card {
+    max-width: 400px;
+    background-color: var(--second-very-dark-blue);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card__container__images {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    transition: opacity 0 .3s ease-in-out,
+        cursor 0.3s ease-in-out,
+}
+
+.card__container__images,
+.card__container__image__equilibrium,
+.card__container__image__overlay {
+    border-radius: 5px;
+}
+
+.card__container__image__equilibrium,
+.card__container__avatar__image__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__container__image__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    background-color: var(--cyan);
+}
+
+.card__container__images:hover .card__container__image__overlay {
+    opacity: 0.5;
+}
+
+.card__container__image__icon-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+
+.card__container__images:hover .card__container__image__icon-view {
+    cursor: pointer;
+    display: block;
+}
+
+.card__container__title {
+    margin: 25px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card__container__description {
+    line-height: 1.4;
+    font-size: 18px;
+    color: var(--soft-blue);
+}
+
+.card__container__description,
+.card__container__details,
+.separate__bar {
+    margin-bottom: 25px;
+}
+
+.card__container__details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__container__details div {
+    display: flex;
+    width: 28%;
+}
+
+.card__container__details__img {
+    margin-right: 5px;
+}
+
+.card__container__details__text--one {
+    color: var(--cyan);
+}
+
+.card__container__details__text--two,
+.card__container__avatar__text {
+    color: var(--soft-blue);
+}
+
+.separate__bar {
+    width: 100%;
+    height: 1px;
+    background-color: var(--third-very-dark-blue);
+}
+
+.card__container__avatar {
+    display: flex;
+    align-items: center;
+}
+
+.card__container__avatar__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    margin-right: 20px;
+}
+
+.card__container__title,
+.card__container__avatar__text span {
+    color: var(--white);
+}
+
+.card__container__title,
+.card__container__avatar__text span {
+    transition: color 0.3s ease-in-out,
+        cursor 0.3s ease-in-out;
+}
+
+.card__container__title:hover,
+.card__container__avatar__text span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
