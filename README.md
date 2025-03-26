@@ -14,6 +14,8 @@ Les utilisateurs doivent pouvoir :
 
 ## Démonstration
 
+Lien vers le projet : https://aperbet56.github.io/NFT_preview_card_component/
+
 ## Projet développé avec
 
 - Utilisation des balises sémantiques HTML5
