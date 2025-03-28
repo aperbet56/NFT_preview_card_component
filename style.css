@@ -74,11 +74,11 @@ body {
     height: 100%;
     opacity: 0;
     transition: 0.3s ease-in-out;
-    background-color: var(--cyan);
+    background-color: rgba(0, 255, 255, 0.5);
 }
 
 .card__container__images:hover .card__container__image__overlay {
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .card__container__image__icon-view {
